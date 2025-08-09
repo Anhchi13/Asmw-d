@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Giỏ hàng</title>
+</head>
+<body>
+    <h1>Giỏ hàng của bạn</h1>
+    <div id="cart-items"></div>
+
+    <script>
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        let cartItemsDiv = document.getElementById("cart-items");
+
+        if (cart.length === 0) {
+            cartItemsDiv.innerHTML = "<p>Giỏ hàng trống</p>";
+        } else {
+            cart.forEach(item => {
+                let div = document.createElement("div");
+                div.innerHTML = `<strong>${item.name}</strong> - ${item.price}`;
+                cartItemsDiv.appendChild(div);
+            });
+        }
+    </script>
+</body>
+</html>

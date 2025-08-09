@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Trang Sức Cưới | PNJ</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #fff;
+      color: #002147;
+    }
+    header {
+      background: linear-gradient(to right, #fff3d1, #ffe9bd);
+      padding: 12px;
+      text-align: center;
+    }
+    header img {
+      height: 50px;
+      max-width: 100%;
+    }
+    nav {
+      background-color: #fff;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 12px 0;
+      border-top: 1px solid #eee;
+      border-bottom: 1px solid #eee;
+    }
+    nav a {
+      text-decoration: none;
+      color: #002147;
+      font-weight: bold;
+      font-size: 1rem;
+      padding: 4px 8px;
+      border-radius: 4px;
+      transition: background 0.2s;
+    }
+    .banner-wrapper {
+      display: flex;
+      justify-content: center;
+      background: #fff;
+      padding: 30px 0 10px 0;
+    }
+    .banner {
+      position: relative;
+      width: 900px;
+      max-width: 98vw;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 24px rgba(180,140,62,0.08);
+      background: #fff;
+    }
+    .banner img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+      border-radius: 12px;
+      background: #fff;
+    }
+    .banner-text {
+      position: absolute;
+      top: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: #002147;
+      text-align: left;
+      width: 90%;
+      pointer-events: none;
+      font-family: 'Times New Roman', serif;
+    }
+    .banner-text h2 {
+      font-size: 2rem;
+      margin: 0 0 10px 0;
+      text-shadow: 0 2px 8px #fff8e1;
+      color: #002147;
+    }
+    .banner-text p {
+      font-size: 1.2rem;
+      color: #b48c3e;
+      margin: 0;
+      text-shadow: 0 2px 8px #fff8e1;
+      font-weight: bold;
+    }
+    .wedding-categories {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin: 30px 0 10px 0;
+      flex-wrap: wrap;
+    }
+    .wedding-cat {
+      width: 140px;
+      text-align: center;
+    }
+    .wedding-cat img {
+      width: 90px;
+      height: 90px;
+      object-fit: contain;
+      border-radius: 50%;
+      background: #fff;
+      box-shadow: 0 2px 8px #eee;
+      margin-bottom: 8px;
+    }
+    .wedding-cat span {
+      display: block;
+      font-size: 15px;
+      color: #002147;
+      font-weight: bold;
+      margin-top: 4px;
+    }
+    .subnav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+      margin: 10px 0 20px 0;
+    }
+    .subnav button {
+      border: 1px solid #002147;
+      background-color: white;
+      color: #002147;
+      padding: 8px 12px;
+      font-weight: bold;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 13px;
+      transition: background 0.2s;
+    }
+    .subnav button:hover {
+      background: #ffe9bd;
+    }
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px 30px 40px;
+    }
+    .product-card {
+      width: 180px;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+      text-align: center;
+      padding: 15px;
+      transition: box-shadow 0.2s;
+      margin-bottom: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .product-card:hover {
+      box-shadow: 0 4px 12px rgba(180, 140, 62, 0.15);
+    }
+    .product-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+      max-width: 140px;
+    }
+    .product-card h4 {
+      font-size: 15px;
+      margin: 10px 0 5px;
+      color: #002147;
+      word-break: break-word;
+    }
+    .product-card p {
+      font-size: 13px;
+      color: #b48c3e;
+      margin: 0 0 8px 0;
+    }
+    @media (max-width: 900px) {
+      .banner {
+        width: 100vw;
+      }
+      .banner img {
+        height: 160px;
+      }
+      .products {
+        gap: 12px;
+        padding: 10px 8px 30px;
+      }
+      .product-card {
+        width: 44vw;
+        min-width: 140px;
+        padding: 10px;
+      }
+      .wedding-cat {
+        width: 100px;
+      }
+      .wedding-cat img {
+        width: 60px;
+        height: 60px;
+      }
+    }
+    @media (max-width: 600px) {
+      nav {
+        gap: 10px;
+        font-size: 0.95rem;
+        padding: 8px 0;
+      }
+      .banner-wrapper {
+        padding: 12px 0 6px 0;
+      }
+      .banner {
+        width: 100vw;
+      }
+      .banner img {
+        height: 110px;
+        border-radius: 8px;
+      }
+      .wedding-categories {
+        gap: 12px;
+        margin: 16px 0 8px 0;
+      }
+      .wedding-cat {
+        width: 80px;
+      }
+      .wedding-cat img {
+        width: 40px;
+        height: 40px;
+      }
+      .wedding-cat span {
+        font-size: 12px;
+      }
+      .subnav {
+        gap: 5px;
+        margin: 8px 0 12px 0;
+      }
+      .subnav button {
+        font-size: 12px;
+        padding: 6px 8px;
+      }
+      .products {
+        gap: 8px;
+        padding: 8px 2px 20px;
+      }
+      .product-card {
+        width: 90vw;
+        min-width: 120px;
+        padding: 8px;
+      }
+      .product-card img {
+        max-width: 100px;
+      }
+      .product-card h4 {
+        font-size: 13px;
+      }
+      .product-card p {
+        font-size: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <img src="https://cdn.pnj.io/images/logo/pnj.com.vn.png" alt="Logo PNJ">
+  </header>
+
+  <!-- Main Menu -->
+  <nav>
+    <a href="index.html">Trang Chủ</a>
+    <a href="trangsuc.html">Trang Sức</a>
+    <a href="trangsuccuoi.html">Trang Sức Cưới</a>
+    <a href="#">Đồng Hồ</a>
+    <a href="#">Quà Tặng</a>
+    <a href="#">Thương Hiệu</a>
+    <a href="#">Blog</a>
+    <a href="#">Khuyến Mãi</a>
+  </nav>
+
+  <!-- Banner Trang sức cưới -->
+  <div class="banner-wrapper">
+    <div class="banner">
+      <img src="https://cdn.pnj.io/images/promo/246/ts-cuoi-t4-25-1200x450noscheme.jpg" alt="Banner Trang Sức Cưới">
+    </div>
+  </div>
+
+  <!-- Wedding categories (icon style) -->
+  <div class="wedding-categories">
+    <div class="wedding-cat">
+      <img src="https://cdn.pnj.io/images/2024/12/cuoi/1-subhenho.png" alt="Hẹn hò">
+      <span>Quà Hẹn hò</span>
+    </div>
+    <div class="wedding-cat">
+      <img src="https://cdn.pnj.io/images/2024/12/cuoi/2-subcauhon.png" alt="Cầu hôn">
+      <span>Trang sức Cầu hôn</span>
+    </div>
+    <div class="wedding-cat">
+      <img src="https://cdn.pnj.io/images/2024/12/cuoi/3-subkethon.png" alt="Kết hôn">
+      <span>Trang sức Kết hôn</span>
+    </div>
+    <div class="wedding-cat">
+      <img src="https://cdn.pnj.io/images/2024/12/cuoi/4-subkyniem.png" alt="Kỷ niệm">
+      <span>Kỷ niệm</span>
+    </div>
+  </div>
+
+  <!-- Subnav buttons -->
+  <div class="subnav">
+    <button>Nhẫn cưới Cặp</button>
+    <button>Nhẫn cưới Vàng Trắng</button>
+    <button>Nhẫn cưới Kim Cương</button>
+    <button>Nhẫn cưới Vàng 18K</button>
+    <button>Trang sức Cưới 24K</button>
+    <button>Quà Hẹn hò</button>
+    <button>Trang sức Cầu hôn</button>
+    <button>Trang sức Kết hôn</button>
+    <button>Kỷ niệm</button>
+  </div>
+
+  <!-- Sản phẩm Trang sức cưới -->
+  <div class="products">
+    <div class="product-card">
+      <img src="https://cdn.pnj.io/images/thumbnails/300/300/detailed/221/sp-gb0000y003060-bong-tai-vang-24k-pnj-trau-cau-1.png" alt="Nhẫn Cưới Vàng Trắng">
+      <h4>Bông tai cưới Vàng 24K PNJ Trầu Cau 0000Y003060</h4>
+      <p>Giá: 33.243.000đ</p>
+    </div>
+    <div class="product-card">
+      <img src="https://cdn.pnj.io/images/thumbnails/300/300/detailed/225/sp-gbddddw004320-bong-tai-kim-cuong-vang-trang-14k-pnj-trau-cau-1.png" alt="Nhẫn Cưới Vàng Hồng">
+      <h4>Bông tai Kim cương Vàng Trắng 14K PNJ Trầu Cau DDDDW004320</h4>
+      <p>Giá: 55.686.000đ</p>
+    </div>
+    <div class="product-card">
+      <img src="https://cdn.pnj.io/images/thumbnails/300/300/detailed/215/sp-gc0000y000425-day-co-vang-24k-pnj-1.png" alt="Nhẫn Cưới Kim Cương">
+      <h4>Dây cổ cưới Vàng 24K PNJ Trầu Cau 0000Y000425</h4>
+      <p>Giá: 291.936.000đ</p>
+    </div>
+    <div class="product-card">
+      <img src="https://cdn.pnj.io/images/thumbnails/300/300/detailed/225/sp-gndd00w005772-nhan-kim-cuong-vang-trang-14k-pnj-trau-cau-1.png" alt="Nhẫn Cưới Vàng 18K">
+      <h4>Nhẫn cưới Kim cương Vàng trắng 14K PNJ Trầu Cau DD00W005772</h4>
+      <p>Giá: 12.618.000đ</p>
+    </div>
+    <div class="product-card">
+      <img src="https://cdn.pnj.io/images/thumbnails/300/300/detailed/222/sp-gndd00w005773-nhan-kim-cuong-vang-trang-14k-pnj-trau-cau-1.png" alt="Trang sức Cưới 24K">
+      <h4>Nhẫn cưới Kim cương Vàng Trắng 14K PNJ Trầu Cau DD00W005773</h4>
+      <p>Giá: 13.447.000đ</p>
+    </div>
+    <div class="product-card">
+      <img src="https://cdn.pnj.io/images/thumbnails/300/300/detailed/225/sp-gnddddw013306-nhan-kim-cuong-vang-trang-14k-pnj-trau-cau-1.png" alt="Quà Hẹn hò">
+      <h4>Nhẫn Kim cương Vàng Trắng 14K PNJ Trầu Cau DDDDW013306</h4>
+      <p>Giá: 58.740.000đ</p>
+    </div>
+    <div class="product-card">
+      <img src="https://cdn.pnj.io/images/thumbnails/300/300/detailed/222/sp-gnpaxmw000187-nhan-vang-trang-10k-dinh-ngoc-trai-akoya-pnj-trau-cau-01.png" alt="Trang sức Cầu hôn">
+      <h4>Nhẫn Vàng trắng 10K Đính ngọc trai Akoya PNJ Trầu Cau PAXMW000187</h4>
+      <p>Giá: 9.694.000đ</p>
+    </div>
+    <div class="product-card">
+      <img src="https://cdn.pnj.io/images/thumbnails/300/300/detailed/213/sp-gm0000w000423-mat-day-chuyen-vang-trang-y-18k-pnj-1.png" alt="Trang sức Kết hôn">
+      <h4>Mặt dây chuyền Vàng trắng Ý 18K PNJ 0000W000423</h4>
+      <p>Giá: 3.033.000đ</p>
+    </div>
+    <div class="product-card">
+      <img src="https://cdn.pnj.io/images/thumbnails/300/300/detailed/119/gc0000w000142-day-co-vang-trang-10k-pnj-01.png" alt="Kỷ niệm">
+      <h4>Dây cổ Vàng trắng 10K PNJ True Love 0000W000142</h4>
+      <p>Giá: 17.711.840đ</p>
+    </div>
+  </div>
+</body>
+</html>

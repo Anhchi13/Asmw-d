@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đăng ký tài khoản - PNJ</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .register-container {
+      max-width: 400px;
+      margin: 80px auto;
+      padding: 30px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      background: #fff;
+    }
+    .register-container h2 {
+      text-align: center;
+      color: #1f4070;
+      margin-bottom: 20px;
+    }
+    .register-container input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+    .register-container button {
+      width: 100%;
+      padding: 10px;
+      background-color: #1f4070;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .register-container button:hover {
+      background-color: #163358;
+    }
+    .register-container p {
+      text-align: center;
+      margin-top: 10px;
+      font-size: 13px;
+    }
+    .register-container p a {
+      color: #1f4070;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="register-container">
+    <h2>Đăng ký tài khoản PNJ</h2>
+    <form action="#" method="post">
+      <input type="text" name="fullname" placeholder="Họ và tên" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <input type="tel" name="phone" placeholder="Số điện thoại" required>
+      <input type="password" name="password" placeholder="Mật khẩu" required>
+      <input type="password" name="confirm_password" placeholder="Nhập lại mật khẩu" required>
+      <button type="submit">Tạo tài khoản</button>
+    </form>
+    <p>Đã có tài khoản? <a href="#">Đăng nhập</a></p>
+  </div>
+<script>
+  document.querySelector("form").addEventListener("submit", function(e) {
+    e.preventDefault(); // Ngăn form gửi thật
+
+    // Lấy giá trị mật khẩu và xác nhận
+    const pw = document.querySelector("input[name='password']").value;
+    const confirmPw = document.querySelector("input[name='confirm_password']").value;
+
+    if (pw !== confirmPw) {
+      alert("Mật khẩu không khớp!");
+      return;
+    }
+
+    // Nếu hợp lệ, chuyển về trang chủ
+    alert("Đăng ký thành công! Quay lại trang chủ.");
+    window.location.href = "index.html";
+  });
+</script>
+</body>
+</html>

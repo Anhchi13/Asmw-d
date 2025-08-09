@@ -1,0 +1,271 @@
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #fff;
+      color: #002147;
+    }
+    .main-header {
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .top-bar, .nav-bar {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      box-sizing: border-box;
+      padding: 8px 16px;
+    }
+    .top-links, .contact-info {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+    }
+    .nav-bar {
+      flex-direction: row;
+      gap: 16px;
+      padding: 12px 16px;
+    }
+    .logo {
+      height: 48px;
+      max-width: 120px;
+      margin-right: 16px;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      align-items: center;
+    }
+    nav a {
+      text-decoration: none;
+      color: #002147;
+      font-weight: bold;
+      font-size: 1rem;
+      padding: 4px 8px;
+      border-radius: 4px;
+      transition: background 0.2s;
+    }
+    nav a.highlight {
+      color: #b48c3e;
+      background: #fff3d1;
+    }
+    .search-box {
+      flex: 1 1 180px;
+      display: flex;
+      justify-content: flex-end;
+      min-width: 120px;
+    }
+    .search-box input {
+      padding: 6px 12px;
+      border-radius: 4px;
+      border: 1px solid #eee;
+      font-size: 1rem;
+      width: 100%;
+      max-width: 200px;
+    }
+    .main-banner {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #fff;
+      margin: 0;
+      padding: 0;
+    }
+    .main-banner img {
+      width: 100%;
+      max-width: 1200px;
+      height: auto;
+      display: block;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+    .promo-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 24px;
+      padding: 24px 8px;
+      background: #fff;
+    }
+    .promo-box {
+      background: #fff3d1;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(180,140,62,0.08);
+      padding: 18px;
+      text-align: center;
+      width: 260px;
+      min-width: 180px;
+      flex: 1 1 220px;
+    }
+    .promo-box img {
+      width: 100%;
+      max-width: 120px;
+      height: auto;
+      margin-top: 10px;
+      border-radius: 8px;
+    }
+    .cta-link {
+      text-align: center;
+      margin: 18px 0;
+    }
+    .cta-link a {
+      display: inline-block;
+      background: #b48c3e;
+      color: #fff;
+      padding: 10px 28px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+      transition: background 0.2s;
+    }
+    .cta-link a:hover {
+      background: #002147;
+    }
+    .bottom-banner {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: #fff;
+      margin: 0;
+      padding: 0 0 24px 0;
+    }
+    .bottom-banner img {
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+      border-radius: 12px;
+      margin-bottom: 10px;
+      object-fit: cover;
+    }
+    .voucher-text {
+      text-align: center;
+      font-size: 1.1rem;
+      color: #002147;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .floating-zalo, .floating-call {
+      position: fixed;
+      right: 18px;
+      z-index: 99;
+      background: #fff;
+      border-radius: 50%;
+      box-shadow: 0 2px 8px rgba(180,140,62,0.12);
+      padding: 8px;
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+    .floating-zalo {
+      bottom: 80px;
+    }
+    .floating-call {
+      bottom: 20px;
+    }
+    .floating-zalo img, .floating-call img {
+      width: 32px;
+      height: 32px;
+    }
+    @media (max-width: 900px) {
+      .main-header, .top-bar, .nav-bar, .main-banner, .promo-section, .bottom-banner {
+        max-width: 100vw;
+        padding-left: 0;
+        padding-right: 0;
+      }
+      .banner, .main-banner img, .bottom-banner img {
+        max-width: 100vw;
+      }
+      .promo-box {
+        min-width: 140px;
+        width: 48vw;
+        padding: 12px;
+      }
+      nav {
+        gap: 10px;
+      }
+      .search-box input {
+        max-width: 120px;
+      }
+    }
+    @media (max-width: 600px) {
+      .top-bar, .nav-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        padding: 8px 4px;
+      }
+      .logo {
+        height: 36px;
+        max-width: 80px;
+        margin-bottom: 8px;
+      }
+      nav {
+        flex-wrap: wrap;
+        gap: 6px;
+        font-size: 0.95rem;
+      }
+      .main-banner img, .bottom-banner img {
+        border-radius: 8px;
+        max-width: 100vw;
+        height: auto;
+      }
+      .promo-section {
+        gap: 12px;
+        padding: 12px 2px;
+      }
+      .promo-box {
+        min-width: 120px;
+        width: 90vw;
+        padding: 10px;
+      }
+      .cta-link a {
+        padding: 8px 16px;
+        font-size: 0.95rem;
+      }
+      .floating-zalo, .floating-call {
+        width: 40px;
+        height: 40px;
+        padding: 5px;
+      }
+      .floating-zalo img, .floating-call img {
+        width: 24px;
+        height: 24px;
+      }
+    }
+.cart-icon {
+    position: fixed;
+    bottom: 20px;      /* Cùng độ cao với chat box */
+    right: 40px;       /* Đẩy sang trái để không chồng lên chat box */
+    display: inline-block;
+    z-index: 9999;
+}
+
+.cart-icon img {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+#cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+}
+
